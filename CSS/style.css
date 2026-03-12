@@ -1,0 +1,454 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* ===== LAYOUT ===== */
+header {
+  background: #222;
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+}
+
+.header-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo h1{
+  font-size: 30px;
+  color: white;
+}
+.header-logo h1 span {
+  font-weight: bold;
+  color: yellow;
+}
+
+/* ===== COMPONENTS ===== */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 19px;
+}
+nav ul li{
+  list-style: none;
+  color: yellow;
+}
+nav ul li a{
+  color: yellow;
+  text-decoration: none;
+}
+.hamburger{
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+./* cta-btn{
+  padding: 10px 20px;
+  background: yellow;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.gs-btn{
+  text-decoration: none;
+  font-size: 20px;
+} */
+
+.primary-btn:hover {
+  background: #0056b3;
+}
+/*======= hero==========*/
+#hero{
+  background-image: url('../assets/images/choir1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height:40vh;
+  padding: 100px 50px;
+}
+#hero h1{
+  color: white;
+  font-size: 60px;
+}
+#hero h1 span{
+  color: yellow;
+}
+#hero h3{
+  color: yellow;
+  font-size: 30px;
+}
+.hero-get-started{
+  padding:30px 40px;
+  margin-top: 20px;
+  background-color: yellow;
+  border: none;
+  border-radius: 6px;
+  font-size: 25px;
+}
+/* -----main contents------- */
+.main-contents{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #222;
+  padding: 40px;
+
+}
+#about .godman-intro{
+  color: white;
+  font-size: 45px;
+  margin-top: 40px;
+}
+#about p{
+  color: white;
+  font-size: 25px;
+  margin-top: 20px;
+  line-height: 1.7em;
+  /* text-indent: 1em; */
+}
+#about .core-value{
+  color: white;
+  margin-top: 30px;
+  font-size: 35px;
+}
+#about .choir-intro{
+  color: white;
+  margin-top: 30px;
+}
+
+#music .choir-songs{
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+#music .listen-track{
+  color: grey;
+  text-align: center;l
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.songs-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+.card{
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  
+  
+}
+
+.card img {
+  width: 100%;         /* image fills the width of the card */
+  height: 70%;        /* keeps the aspect ratio */
+  object-fit: cover;   /* crops nicely if needed */
+  object-position: center;
+  object-
+  
+}
+
+.songs-container h3{
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 20px;
+  
+}
+audio{
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.breakpoint{
+  border: 1px solid yellow;
+  margin-top: 100px;
+}
+
+#gallery h1{
+  text-align: center ;
+  color:white ;
+  font-size: 70px;
+  margin-top: 40px;
+}
+.gallery-container{
+  width: 100%;
+  /* overflow:hidden; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 10px;
+  margin: 20px auto;
+  margin-top: 50px;
+  
+}
+.gallery-track{
+  display: flex;
+  gap: 10px;
+  animation: slide 20s linear infinite;
+}
+.gallery-container:active .gallery-track{
+  animation-play-state: paused;
+}
+.gallery-track img{
+  width: 280px;
+  height: 320px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.gallery-img{
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img.zoomed{
+  transform: translate(-50%, -50%) scale(1.3);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  z-index: 9999;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);   /* start at first image */
+  }
+  100% {
+    transform: translateX(-50%); /* slide to left */
+  }
+}
+
+
+/* ------------------- Upcoming Events and News-----------------*/
+
+#events h1{
+  margin-top: 60px;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+#events h1 span{
+  
+  font-weight: bold;
+  color: yellow;
+}
+.event-news-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  min-height: 45vh;
+  background-image: url('../assets/gallery/choir2.jpg');
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size:cover;
+  margin-top:30px;
+}
+.event-news-container .news-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 10px;
+}
+.news-container .news{
+  border-radius: 15px;
+  background-color: #222;
+  padding: 20px;
+  color: white;
+  font-family: Monospace;
+}
+.news h2{
+  font-size: 30px;
+}
+.news p{
+  margin-top: 20px;
+  font-weight: 10px;
+}
+.event-news-container .events-container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+
+}
+.events-container .UE{
+  border-radius: 15px;
+  background-color: #222;
+}
+.UE{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 20px ;
+}
+.UE .date{
+  padding: 30px;
+  line-height: 1.1;
+  text-align: center;
+  border: 2px solid yellow;
+  height: 70%;
+  background-color: gold;
+  border-radius: 50px;
+  color: black;
+  font-size:40px;
+  
+}
+.date span{
+  font-size: 70px;
+  font-weight: bold;
+}
+.UE .events-contexts{
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+}
+.events-contexts h2{
+  font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+/* ----+++---------------- mobile view----------------- */
+
+
+@media (max-width: 768px){
+  nav ul{
+    position: absolute;
+    display: none;
+    flex-direction: column ;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    width: 100%;
+    background: #222;
+    text-align: start;
+    z-index:999;
+  }
+  nav ul.active{
+    display: flex;
+  }
+  .hamburger{
+    display: block;
+  }
+  nav ul li{
+    padding: 15px 45px;
+    line-height: 10px;
+  }
+  .hero{
+  padding: 5em 20px;
+  }
+
+  #hero h1{
+    color: white;
+    font-size: 40px;
+  }
+  #hero h3{
+    font-size: 20px;
+  }
+  .hero-get-started{
+    padding:20px 35px;
+    margin-top: 50px;
+    font-size: 15px;
+  }
+  #about .godman-intro{
+    top: 10px;
+    font-size: 25px;
+  }
+  #about p{
+    font-size: 15px;
+  }
+  #about .choir-intro{
+    font-size: 25px;
+  }
+  
+  #music .choir-songs{
+    font-size: 50px;
+    letter-spacing: 0;
+  }
+  #music .listen-track{
+    letter-spacing: 0;
+    font-size:20px ;
+  }
+  .songs-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+  
+  }
+  .card{
+  width: 100%;
+  height: 500px;
+    
+  }
+  #gallery h1{
+    font-size: 50px;
+  }
+  #events h1{
+    font-size: 45px;
+  }
+  .event-news-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 80px;
+  }
+  .event-news-container .news-container{
+    gap: 20px;
+  }
+  .UE{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 20px ;
+  }
+  .UE .date{
+    padding: 10px;
+    margin-top:20px;
+    padding-top:20px;
+    line-height: 1.0;
+    font-size:25px ;
+    border-radius: 0px;
+  
+  }
+  .date span{
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  
+
+}
+
