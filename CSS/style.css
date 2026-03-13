@@ -436,11 +436,15 @@ font-size: 22px;
   }
   nav ul li{
     padding: 15px;
+    padding-left: 50px;
     line-height: 10px;
   }
   nav ul li span{
-    padding-right:10px;
+    display: block;
     font-size:25px ;
+    margin-left: -35px;
+    margin-top: 5px;
+    
   }
   .hero{
   padding: 5em 20px;
