@@ -48,10 +48,10 @@ nav ul {
 }
 nav ul li{
   list-style: none;
-  color: yellow;
+  color: white;
 }
 nav ul li a{
-  color: yellow;
+  color: white;
   text-decoration: none;
 }
 nav ul li span{
@@ -437,14 +437,8 @@ font-size: 22px;
   nav ul li{
     padding: 15px;
     padding-left: 50px;
-    line-height: 10px;
-  }
-  nav ul li span{
-    display: block;
-    font-size:25px ;
-    margin-left: -35px;
-    margin-top: 5px;
-    
+    line-height:2px;
+    font-weight: bold;
   }
   .hero{
   padding: 5em 20px;
