@@ -446,10 +446,10 @@ font-size: 22px;
 
   #hero h1{
     color: white;
-    font-size: 40px;
+    font-size: 35px;
   }
   #hero h3{
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero-get-started{
     padding:20px 35px;
@@ -505,7 +505,7 @@ font-size: 22px;
   .news-heading h5{
     padding-left: 5px;
     padding-right: 5px;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
   }
   .nc-breakpoint{
